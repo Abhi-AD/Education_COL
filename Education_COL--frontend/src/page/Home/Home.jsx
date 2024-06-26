@@ -1,7 +1,14 @@
+import { Card, Footer, Profile, ScrollingNews, Stories } from "../../components/import"
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <ScrollingNews />
+      <Stories />
+      <Profile />
+      <Card />
+      <Footer />
+    </div>
   )
 }
 

@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { FooterCopyRight, Navbar } from './components/import';
+import { Navbar } from './components/import';
 import { Home } from './page/import ';
 
 function App() {
@@ -14,7 +14,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
-        <FooterCopyRight />
       </div>
     </Router>
   );

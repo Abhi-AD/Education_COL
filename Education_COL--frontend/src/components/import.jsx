@@ -1,2 +1,7 @@
 export { default as Navbar } from './Navbar/Navbar'
 export { default as FooterCopyRight } from './FooterCopyRight/FooterCopyRight'
+export { default as Footer } from './Footer/Footer'
+export { default as ScrollingNews } from './ScrollingNews/ScrollingNews'
+export { default as Stories } from './Card/Stories'
+export { default as Profile } from './Card/Profile'
+export { default as Card } from './Card/Card'

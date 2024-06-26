@@ -1,0 +1,29 @@
+.scrollnews {
+     overflow: hidden;
+     animation: scroll 25s infinite linear;
+}
+
+
+.scrollnewsli::after {
+     content: "";
+     width: 1px;
+     height: 100%;
+     background: #b8b8b8;
+     position: absolute;
+     top: 0;
+     right: 0;
+}
+
+.scrollnewsli:last-child::after {
+     display: none;
+}
+
+@keyframes scroll {
+     from {
+          transform: translateX(100%);
+     }
+
+     to {
+          transform: translateX(-1083px);
+     }
+}
