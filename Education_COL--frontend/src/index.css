@@ -66,3 +66,25 @@
      object-fit: cover;
      border-radius: 50%;
 }
+
+.darkmode {
+     background: var(--black);
+     color: var(--white);
+}
+
+.fs-14 {
+     font-size: 14px;
+}
+
+.fs-16 {
+     font-size: 16px;
+}
+
+.fs-12 {
+     font-size: 12px;
+}
+
+.border-right-1 {
+     border-right: 1px solid #ccc;
+     /* You can change the color as needed */
+}

@@ -1,10 +1,8 @@
-.scrollnews {
-     overflow: hidden;
-     animation: scroll 25s infinite linear;
+.news_body {
+     animation: scroll 25s linear infinite;
 }
 
-
-.scrollnewsli::after {
+.news_body::after {
      content: "";
      width: 1px;
      height: 100%;
@@ -14,16 +12,19 @@
      right: 0;
 }
 
-.scrollnewsli:last-child::after {
-     display: none;
+.news_body:last-child::after {
+     display:
+          none;
 }
 
 @keyframes scroll {
      from {
-          transform: translateX(100%);
+          transform:
+               translateX(100%);
      }
 
      to {
-          transform: translateX(-1083px);
+          transform:
+               translateX(-100%);
      }
 }

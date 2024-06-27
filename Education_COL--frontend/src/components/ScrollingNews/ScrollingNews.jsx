@@ -1,24 +1,23 @@
 import './ScrollingNews.css'
 const ScrollingNews = () => {
      return (
-          <div className="top-0 left-0 right-0 shadow">
-               <div className="position-absolute bg-second  d-flex align-items-center p-0 px-4 text-light fw-bold" style={{ zIndex: '200', height: '2.5rem' }}>
+          <div className="left-0 right-0 shadow overflow-hidden">
+               <div className="position-absolute bg-second  d-flex align-items-center py-3 px-4 text-light fw-bold" style={{ zIndex: '200' }}>
                     Breaking News
                </div>
-               <ul className="d-flex list-unstyled m-0 scrollnews">
-                    <li className="text-nowrap position-relative py-2 px-4 scrollnewsli">
-                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque ab labore quo laudantium id
-                         mollitia? Illum excepturi quae provident, et consequuntur facilis. Unde reiciendis perferendis nam,
-                         eaque cumque sed recusandae.
+               <ul className=" news_body d-flex list-unstyled m-0 text-nowrap px-3 py-3 text-black text-primary position-relative ">
+                    <li className="news">
+                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus non accusamus ipsam sapiente
                     </li>
-                    <li className="text-nowrap position-relative py-2 px-4 scrollnewsli">
-                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque ab labore quo laudantium id
-                         mollitia? Illum excepturi quae provident, et consequuntur facilis. Unde reiciendis perferendis nam,
-                         eaque cumque sed recusandae.
+                    <li className="news">
+                         expedita sed quibusdam odit. Exercitationem voluptates laudantium beatae ducimus quo? Incidunt
+                    </li>
+                    <li className="news">
+                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus non accusamus ipsam sapiente
                     </li>
                </ul>
           </div>
-     )
-}
+     );
+};
 
-export default ScrollingNews
+export default ScrollingNews;

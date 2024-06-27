@@ -71,11 +71,11 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`navbar navbar-expand-lg text-dark ${isColorChanged ? 'bg-second ? text-dark' : 'bg-main ? text-white'}`}>
+    <nav className={`navbar navbar-expand-lg text-dark ${isColorChanged ? 'darkmode' : 'bg-main ? text-white'}`}>
       <div className="container-fluid">
         <Link className="navbar-brand me-auto" to={`/`}>
           {isLargeScreen ? (
-            <img src={LgLogo} alt="Logo" width="140" height="120" />
+            <img src={LgLogo} alt="Logo" width="200" height="180" />
           ) : (
             <img src={SmLogo} alt="Logo" width="100" height="80" />
           )}
@@ -156,7 +156,7 @@ const Navbar = () => {
             <div className="me-3">
               <img
                 src="https://avatars.githubusercontent.com/u/72682273?v=4"
-                className="rounded-circle img-fluid"
+                className="rounded-circle img-fluid shadow"
                 style={{ width: '50px' }}
                 alt="Avatar"
               />
