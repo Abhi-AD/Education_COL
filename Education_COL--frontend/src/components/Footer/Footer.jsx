@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
      return (
           <div className="bg-dark">
-               <div className="bg-main d-flex align-items-center p-3">
+               <div className="bg-second d-flex align-items-center p-3">
                     <div className="container">
                          <div className="d-flex justify-content-between align-items-center">
                               <p className="text-white fs-5 mb-0 fw-bold">Photo</p>

@@ -1,8 +1,10 @@
+import PropTypes from 'prop-types';
 import './ScrollingNews.css'
-const ScrollingNews = () => {
+
+const ScrollingNews = ({ isColorChanged }) => {
      return (
           <div className="left-0 right-0 shadow overflow-hidden">
-               <div className="position-absolute bg-second  d-flex align-items-center py-3 px-4 text-light fw-bold" style={{ zIndex: '200' }}>
+               <div className={`position-absolute d-flex align-items-center py-3 px-4 text-light fw-bold ${isColorChanged ? 'bg-main' : 'bg-primary'} `} style={{ zIndex: '200' }}>
                     Breaking News
                </div>
                <ul className=" news_body d-flex list-unstyled m-0 text-nowrap px-3 py-3 text-black text-primary position-relative ">
@@ -18,6 +20,9 @@ const ScrollingNews = () => {
                </ul>
           </div>
      );
+};
+ScrollingNews.propTypes = {
+     isColorChanged: PropTypes.bool.isRequired,
 };
 
 export default ScrollingNews;
