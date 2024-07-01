@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
+import Dark from './Dark';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import { LgLogo, SmLogo, WhiteLogo } from '../../images';
@@ -8,9 +8,8 @@ import { LgLogo, SmLogo, WhiteLogo } from '../../images';
 const Navbar = () => {
   const [isInputVisible, setIsInputVisible] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
-  const [isToggled, setIsToggled] = useState(false);
-  const [isColorChanged, setIsColorChanged] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleResize = () => {
     setIsLargeScreen(window.innerWidth >= 768);
@@ -36,9 +35,8 @@ const Navbar = () => {
     setSearchTerm(event.target.value);
   };
 
-  const handleToggle = () => {
-    setIsToggled(!isToggled);
-    setIsColorChanged(!isColorChanged);
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
   };
 
   useEffect(() => {
@@ -73,11 +71,11 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`navbar navbar-expand-lg ${isColorChanged ? 'bg-dark text-light' : 'bg-main text-dark'}`}>
+    <nav className={`navbar navbar-expand-lg ${isDarkMode ? 'bg-dark text-light' : 'bg-main text-dark'}`}>
       <div className="container-fluid">
         <Link className="navbar-brand me-auto" to={`/`}>
           {isLargeScreen ? (
-            <img src={isColorChanged ? WhiteLogo : LgLogo} alt="Logo" width="200" height="180" />
+            <img src={isDarkMode ? WhiteLogo : LgLogo} alt="Logo" width="200" height="180" />
           ) : (
             <img src={SmLogo} alt="Logo" width="100" height="80" />
           )}
@@ -88,19 +86,19 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
             <li className="nav-item me-4">
-              <Link className={`nav-link fs-5 ${isColorChanged ? 'text-light' : 'text-dark'}`} aria-current="page" to={`/`}>Home</Link>
+              <Link className={`nav-link fs-5 ${isDarkMode ? 'text-light' : 'text-dark'}`} aria-current="page" to={`/`}>Home</Link>
             </li>
             <li className="nav-item me-4">
-              <Link className={`nav-link fs-5 ${isColorChanged ? 'text-light' : 'text-dark'}`} to={`/`}>Course</Link>
+              <Link className={`nav-link fs-5 ${isDarkMode ? 'text-light' : 'text-dark'}`} to={`/`}>Course</Link>
             </li>
             <li className="nav-item me-4">
-              <Link className={`nav-link fs-5 ${isColorChanged ? 'text-light' : 'text-dark'}`} to={`/`}>Study Abroad</Link>
+              <Link className={`nav-link fs-5 ${isDarkMode ? 'text-light' : 'text-dark'}`} to={`/`}>Study Abroad</Link>
             </li>
             <li className="nav-item me-4">
-              <Link className={`nav-link fs-5 ${isColorChanged ? 'text-light' : 'text-dark'}`} to={`/`}>Contact Us</Link>
+              <Link className={`nav-link fs-5 ${isDarkMode ? 'text-light' : 'text-dark'}`} to={`/`}>Contact Us</Link>
             </li>
             <li className="nav-item me-4">
-              <Link className={`nav-link fs-5 ${isColorChanged ? 'text-light' : 'text-dark'}`} to={`/sandboxing`}>Sandboxing</Link>
+              <Link className={`nav-link fs-5 ${isDarkMode ? 'text-light' : 'text-dark'}`} to={`/sandboxing`}>Sandboxing</Link>
             </li>
           </ul>
           <div className="d-flex align-items-center">
@@ -135,20 +133,7 @@ const Navbar = () => {
                 </div>
               </form>
             )}
-            <Button
-              onClick={handleToggle}
-              className={`me-3 ${isToggled ? 'bg-main' : 'bg-second'}`}
-            >
-              {isToggled ? (
-                <>
-                  <i className="bi bi-moon-stars-fill fs-3"></i>
-                </>
-              ) : (
-                <>
-                  <i className="bi bi-brightness-high-fill fs-3"></i>
-                </>
-              )}
-            </Button>
+            <Dark onToggleDarkMode={toggleDarkMode} />
             <DropdownButton
               id="dropdown-basic-button"
               title={
@@ -160,7 +145,7 @@ const Navbar = () => {
                 />
               }
               align="end"
-              variant="light" // Set the background to danger
+              variant="light"
             >
               <Dropdown.Item href="/">Profile</Dropdown.Item>
               <Dropdown.Item href="/">Settings</Dropdown.Item>
@@ -172,5 +157,7 @@ const Navbar = () => {
     </nav>
   );
 }
+
+
 
 export default Navbar;
