@@ -1,4 +1,5 @@
 import { Card, Footer, FooterCopyRight, Navbar, Profile, ScrollingNews, Stories } from "../../components/import"
+import { Join } from "../../container/import"
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <Stories />
       <Profile />
       <Card />
+      <Join />
       <Footer />
       <FooterCopyRight />
     </div>

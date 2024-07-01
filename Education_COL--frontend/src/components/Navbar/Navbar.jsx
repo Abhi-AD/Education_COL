@@ -100,7 +100,7 @@ const Navbar = () => {
               <Link className={`nav-link fs-5 ${isColorChanged ? 'text-light' : 'text-dark'}`} to={`/`}>Contact Us</Link>
             </li>
             <li className="nav-item me-4">
-              <Link className={`nav-link fs-5 ${isColorChanged ? 'text-light' : 'text-dark'}`} to={`/`}>Sandboxing</Link>
+              <Link className={`nav-link fs-5 ${isColorChanged ? 'text-light' : 'text-dark'}`} to={`/sandboxing`}>Sandboxing</Link>
             </li>
           </ul>
           <div className="d-flex align-items-center">

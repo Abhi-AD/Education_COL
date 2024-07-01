@@ -1,3 +1,5 @@
 export { default as Home } from './Home/Home'
 export { default as Login } from './Login/Login'
 export { default as Register } from './Register/Register'
+export { default as Sandboxing } from './Sandboxing/Sandboxing'
+export { default as SandboxingHeader } from './Sandboxing/SandboxingHeader'

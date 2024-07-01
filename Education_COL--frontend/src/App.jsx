@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-import { Home, Login, Register } from './page/import ';
+import { Home, Login, Register, Sandboxing } from './page/import ';
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/sandboxing" element={<Sandboxing />} />
 
         </Routes>
       </div>
