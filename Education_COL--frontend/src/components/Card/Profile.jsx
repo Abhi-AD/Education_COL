@@ -1,4 +1,7 @@
+import useDarkMode from "../../hooks/useDarkMode";
+
 const Profile = () => {
+     const { isDarkMode } = useDarkMode();
      const imageData = [
           'https://img.freepik.com/free-photo/portrait-male-tourist-visiting-great-wall-china_23-2151261922.jpg?t=st=1719559210~exp=1719562810~hmac=7eb5b0e0a3944e5a1048ea45d19436a3621a7530ab8905ccd369ae9f9fe26fb8&w=1060',
           'https://img.freepik.com/free-photo/portrait-male-tourist-visiting-great-wall-china_23-2151261922.jpg?t=st=1719559210~exp=1719562810~hmac=7eb5b0e0a3944e5a1048ea45d19436a3621a7530ab8905ccd369ae9f9fe26fb8&w=1060',
@@ -15,7 +18,7 @@ const Profile = () => {
      ];
 
      return (
-          <div id="profile" className="carousel slide bg-second" data-bs-ride="carousel">
+          <div id="profile" className={`carousel slide ${isDarkMode ? "darkmode" : "bg-second"}`} data-bs-ride="carousel">
                <div className="carousel-inner">
                     {[...Array(Math.ceil(imageData.length / 6))].map((_, index) => (
                          <div key={index} className={`carousel-item${index === 0 ? ' active' : ''}`}>

@@ -73,6 +73,11 @@
      color: var(--white);
 }
 
+.darkmode2 {
+     background: #6c757d;
+     color: var(--white);
+}
+
 .fs-14 {
      font-size: 14px;
 }

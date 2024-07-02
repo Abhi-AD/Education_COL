@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import useDarkMode from "../../hooks/useDarkMode";
 
 const DreamJob = () => {
+     const { isDarkMode } = useDarkMode();
      const items = [
           { imgSrc: "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ec5be16b046b62a2a860b67f9dc55b86.png" },
           { imgSrc: "https://lwfiles.mycourse.app/62a6cd5e1e9e2fbf212d608d-public/ee17a1d06126f8bfc5444ad666e8ba21.png" },
@@ -23,7 +25,7 @@ const DreamJob = () => {
      ];
 
      return (
-          <div className="bg-main">
+          <div className={`${isDarkMode ? 'darkmode2' : 'bg-main'}`}>
                <div className="container">
                     <div className="p-2">
                          <p className="text-center fw-bold fs-4">Thousands of students achieved their <span className="text-primary fs-3">dream job at</span></p>

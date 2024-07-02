@@ -3,29 +3,34 @@ import { Footer, FooterCopyRight, Navbar, SelectStudent } from "../../components
 import { DreamJob, Join } from "../../container/import"
 import SandboxingHeader from "./SandboxingHeader"
 import SandboxingCount from "./SandboxingCount"
+import useDarkMode from "../../hooks/useDarkMode"
 
 const Sandboxing = () => {
+     const { isDarkMode } = useDarkMode();
      return (
-          <div>
+          <div className={`${isDarkMode ? "darkmode" : ""}`}>
                <Navbar />
                <SandboxingHeader />
                <SandboxingCount />
-               <div className="container">
-                    <div className="row">
-                         <div className="p-5">
-                              <div className="text-center">
-                                   <p className="fs-5 fw-bold text-second" >NEW MAY&apos;24 BATCH🔥</p>
-                                   <p className="fs-6 fw-bold">SIGMA 3.0 : DSA + DEVELOPMENT + APTITUDE</p>
-                                   <p className="fs-6">Start your placement preparation today</p>
-                              </div>
-                              <div className="text-center pb-2 ">
-                                   <Link type="button" className="move text-light btn btn-primary fs-4 bg-second" to={`/what-we-do`}>
-                                        Explore <i className="bi bi-chevron-double-right" data-aos="fade-left"></i>
-                                   </Link>
+               <div className={`${isDarkMode ? 'darkmode2' : 'bg-light'}`}>
+                    <div className="container">
+                         <div className="row">
+                              <div className="p-5">
+                                   <div className="text-center">
+                                        <p className="fs-5 fw-bold text-second" >NEW MAY&apos;24 BATCH🔥</p>
+                                        <p className="fs-6 fw-bold">SIGMA 3.0 : DSA + DEVELOPMENT + APTITUDE</p>
+                                        <p className="fs-6">Start your placement preparation today</p>
+                                   </div>
+                                   <div className="text-center pb-2 ">
+                                        <Link type="button" className="move text-light btn btn-primary fs-4 bg-second" to={`/what-we-do`}>
+                                             Explore <i className="bi bi-chevron-double-right" data-aos="fade-left"></i>
+                                        </Link>
+                                   </div>
                               </div>
                          </div>
                     </div>
                </div>
+
                <DreamJob />
                <hr className="hr mt-5 mb-5 text-dark" />
                <SelectStudent />

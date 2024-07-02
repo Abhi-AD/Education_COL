@@ -1,8 +1,10 @@
 import CountUp from "react-countup";
+import useDarkMode from "../../hooks/useDarkMode";
 
 const SandboxingCount = () => {
+     const { isDarkMode } = useDarkMode();
      return (
-          <div className="bg-second">
+          <div className={`${isDarkMode ? 'darkmode' : 'bg-second'}`}>
                <div className="container text-light">
                     <div className="p-5">
                          <p className="text-center fs-4 mb-3 fw-bold">INDIA&apos;S MOST LOVED CODING COMMUNITY ❤️</p>

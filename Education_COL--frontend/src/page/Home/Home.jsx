@@ -1,9 +1,11 @@
 import { Card, Footer, FooterCopyRight, Navbar, Profile, ScrollingNews, Stories } from "../../components/import"
 import { Join } from "../../container/import"
+import useDarkMode from "../../hooks/useDarkMode";
 
 const Home = () => {
+  const { isDarkMode } = useDarkMode();
   return (
-    <div>
+    <div className={`${isDarkMode ? "darkmode" : ""}`}>
       <Navbar />
       <ScrollingNews />
       <Stories />

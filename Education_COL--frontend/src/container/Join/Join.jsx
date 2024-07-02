@@ -1,11 +1,13 @@
 import { ReactTyped } from "react-typed";
+import useDarkMode from "../../hooks/useDarkMode";
 
 const Join = () => {
+     const { isDarkMode } = useDarkMode();
      const strings = ["#instagram", "#youtube", "#twitter"];
      return (
-          <div className={``}>
-               <div className="container text-center">
-                    <div className="title mt-5">
+          <div className={`${isDarkMode ? "bg-secondary" : "bg-main"}`}>
+               <div className="container text-center mt-5">
+                    <div className="title">
                          <p className="fs-4 text-uppercase fw-bold">Join us on</p>
                          <p>
                               <ReactTyped

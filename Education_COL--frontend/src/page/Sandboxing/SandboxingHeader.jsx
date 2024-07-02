@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom"
 import Typewriter from "./Typewriter"
+import useDarkMode from "../../hooks/useDarkMode";
 
 const SandboxingHeader = () => {
+     const { isDarkMode } = useDarkMode();
      return (
-          <div className="bg-light">
+          <div className={` ${isDarkMode ? "darkmode2" : "bg-light"}`}>
                <div className="container">
                     <div className="row p-5">
                          <div className="col-md-5">
@@ -13,7 +15,7 @@ const SandboxingHeader = () => {
                               </p>
                               <Typewriter />
                               <div className="">
-                                   <Link type="button" className="text-light fw-bold border-0 btn btn-primary fs-4 bg-second p-3" to={`/what-we-do`}>
+                                   <Link type="button" className={`text-light fw-bold border-0 btn btn-primary fs-4 bg-second p-3`} to={`/what-we-do`}>
                                         Explore new batches <i className="bi bi-chevron-right" data-aos="fade-left"></i>
                                    </Link>
                               </div>
@@ -25,7 +27,7 @@ const SandboxingHeader = () => {
                          <div className="col-md-1"></div>
                     </div>
                </div>
-          </div>
+          </div >
      )
 }
 

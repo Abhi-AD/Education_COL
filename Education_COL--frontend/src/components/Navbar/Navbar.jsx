@@ -69,9 +69,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg ${
-        isDarkMode ? "bg-dark text-light" : "bg-main text-dark"
-      }`}
+      className={`navbar navbar-expand-lg ${isDarkMode ? "darkmode2" : "bg-main text-dark"
+        }`}
     >
       <div className="container-fluid">
         <Link className="navbar-brand me-auto" to={`/`}>
@@ -101,9 +100,8 @@ const Navbar = () => {
           <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
             <li className="nav-item me-4">
               <Link
-                className={`nav-link fs-5 ${
-                  isDarkMode ? "text-light" : "text-dark"
-                }`}
+                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
+                  }`}
                 aria-current="page"
                 to={`/`}
               >
@@ -112,9 +110,8 @@ const Navbar = () => {
             </li>
             <li className="nav-item me-4">
               <Link
-                className={`nav-link fs-5 ${
-                  isDarkMode ? "text-light" : "text-dark"
-                }`}
+                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
+                  }`}
                 to={`/`}
               >
                 Course
@@ -122,9 +119,8 @@ const Navbar = () => {
             </li>
             <li className="nav-item me-4">
               <Link
-                className={`nav-link fs-5 ${
-                  isDarkMode ? "text-light" : "text-dark"
-                }`}
+                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
+                  }`}
                 to={`/`}
               >
                 Study Abroad
@@ -132,9 +128,8 @@ const Navbar = () => {
             </li>
             <li className="nav-item me-4">
               <Link
-                className={`nav-link fs-5 ${
-                  isDarkMode ? "text-light" : "text-dark"
-                }`}
+                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
+                  }`}
                 to={`/`}
               >
                 Contact Us
@@ -142,9 +137,8 @@ const Navbar = () => {
             </li>
             <li className="nav-item me-4">
               <Link
-                className={`nav-link fs-5 ${
-                  isDarkMode ? "text-light" : "text-dark"
-                }`}
+                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
+                  }`}
                 to={`/sandboxing`}
               >
                 Sandboxing
@@ -198,7 +192,7 @@ const Navbar = () => {
                 />
               }
               align="end"
-              variant="light"
+              variant=""
             >
               <Dropdown.Item href="/">Profile</Dropdown.Item>
               <Dropdown.Item href="/">Settings</Dropdown.Item>

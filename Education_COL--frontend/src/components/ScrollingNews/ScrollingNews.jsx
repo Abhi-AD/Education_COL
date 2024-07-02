@@ -6,22 +6,16 @@ const ScrollingNews = ({ isColorChanged }) => {
   const { isDarkMode } = useDarkMode();
   return (
     <div
-      className={`${
-        isDarkMode ? "darkmode text-light" : ""
-      }  left-0 right-0 shadow overflow-hidden`}
-    >
+      className={`  left-0 right-0 shadow overflow-hidden`}>
       <div
-        className={`position-absolute d-flex align-items-center py-3 px-4 text-light fw-bold ${
-          isColorChanged ? "bg-main" : "bg-primary"
-        } `}
+        className={`position-absolute d-flex align-items-center py-3 px-4 text-light fw-bold ${isColorChanged ? "dark" : ""
+          } ${isDarkMode ? "darkmode bg-success" : "bg-primary"}`}
         style={{ zIndex: "200" }}
       >
         Breaking News
       </div>
       <ul
-        className={` news_body d-flex list-unstyled m-0 text-nowrap px-3 py-3  position-relative ${
-          isDarkMode ? "darkmode" : ""
-        } `}
+        className={` news_body d-flex list-unstyled m-0 text-nowrap px-3 py-3 position-relative} `}
       >
         <li className="news">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
@@ -36,7 +30,7 @@ const ScrollingNews = ({ isColorChanged }) => {
           non accusamus ipsam sapiente
         </li>
       </ul>
-    </div>
+    </div >
   );
 };
 ScrollingNews.propTypes = {
