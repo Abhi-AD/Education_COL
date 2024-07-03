@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Course, Home, Login, Register, Sandboxing } from './page/import ';
 import ContactUs from './page/ContactUs/ContactUs';
 import { Footer, FooterCopyRight, Navbar } from './components/import';
+import { Myprofile } from './container/import';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/sandboxing" element={<Sandboxing />} />
           <Route path="/course" element={<Course />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/myprofile" element={<Myprofile />} />
         </Routes>
         <Footer />
         <FooterCopyRight />

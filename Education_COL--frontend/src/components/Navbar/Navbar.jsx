@@ -194,7 +194,7 @@ const Navbar = () => {
             )}
             {isInputVisible && (
               <form className="d-flex align-items-center gap-3" role="search">
-                <input
+               second <input
                   className="form-control me-2"
                   type="search"
                   placeholder="Search"
@@ -231,7 +231,7 @@ const Navbar = () => {
               align="end"
               variant=""
             >
-              <Dropdown.Item href="/">Profile</Dropdown.Item>
+              <Dropdown.Item href="/myprofile">Profile</Dropdown.Item>
               <Dropdown.Item href="/">Settings</Dropdown.Item>
               <Dropdown.Item href="/login">Logout</Dropdown.Item>
             </DropdownButton>
