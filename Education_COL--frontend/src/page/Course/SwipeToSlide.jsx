@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
-import useDarkMode from "../../hooks/useDarkMode";
-import Slider from "react-slick";
 import PropTypes from "prop-types";
+import Slider from "react-slick";
+import useDarkMode from "../../hooks/useDarkMode";
 
 function SampleNextArrow(props) {
      const { style, onClick } = props;
@@ -47,8 +46,7 @@ SamplePrevArrow.propTypes = {
      onClick: PropTypes.func,
 };
 
-const Card = () => {
-     const { isDarkMode } = useDarkMode();
+function SwipeToSlide() {
      const settings = {
           dots: false,
           infinite: true,
@@ -80,32 +78,23 @@ const Card = () => {
                }
           ]
      };
-
+     const { isDarkMode } = useDarkMode();
      const cardData = [
           '9', '18', '27', '36', '45', '54', '63', '72', '81', '90', '99', '108'
      ];
-
      return (
-          <div id="card" className={`carousel slide mx-auto p-4 ${isDarkMode ? "darkmode" : "bg-main"}`} data-bs-ride="carousel">
-               <div className="carousel-inner">
-                    <Slider {...settings} className="d-flex">
-                         {cardData.map((item, index) => (
-                              <div key={index} className="p-2" style={{ gap: "10px" }}>
-                                   <div className={`card shadow border-0 mt-4 shadow d-flex justify-content-center align-items-center ${isDarkMode ? "text-light bg-secondary" : "bg-main text-dark"}`}>
-                                        <h5 className="card-title fs-4 mt-5 mb-5">Card title</h5>
-                                        <img className="img-fluid" src="https://img.freepik.com/free-photo/sunset-silhouettes-trees-mountains-generative-ai_169016-29371.jpg?t=st=1719385265~exp=1719388865~hmac=5963721223ab15ca0d61f602b9b3321f18a0511f302f36f8738b09563281dc84&w=1380" alt="card" />
-                                        <div className="card-body">
-                                             <p>{item}</p>
-                                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
-                                             <Link to={`/`} className="btn border-0 btn-light bg-secondary text-light mb-2">Go somewhere</Link>
-                                        </div>
-                                   </div>
+          <div className={` slider-container p-2  ${isDarkMode ? 'bg-second' : 'bg-danger'}`}>
+               <Slider {...settings} className="d-flex">
+                    {cardData.map((item, index) => (
+                         <div key={index} className="card text-center">
+                              <div className="card-body d-flex align-items-center justify-content-center" style={{ height: '15rem' }}>
+                                   <h3>{item}</h3>
                               </div>
-                         ))}
-                    </Slider>
-               </div>
+                         </div>
+                    ))}
+               </Slider>
           </div>
      );
-};
+}
 
-export default Card;
+export default SwipeToSlide;

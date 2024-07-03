@@ -78,11 +78,11 @@ const Navbar = () => {
             <img
               src={isDarkMode ? WhiteLogo : LgLogo}
               alt="Logo"
-              width="200"
-              height="180"
+              width="150"
+              height="100"
             />
           ) : (
-            <img src={SmLogo} alt="Logo" width="100" height="80" />
+            <img src={SmLogo} alt="Logo" width="100" height="50" />
           )}
         </Link>
         <button
@@ -112,7 +112,7 @@ const Navbar = () => {
               <Link
                 className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
                   }`}
-                to={`/`}
+                to={`/course`}
               >
                 Course
               </Link>

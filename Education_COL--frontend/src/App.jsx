@@ -3,8 +3,10 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import { Home, Login, Register, Sandboxing } from './page/import ';
+import { Course, Home, Login, Register, Sandboxing } from './page/import ';
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/sandboxing" element={<Sandboxing />} />
+          <Route path="/course" element={<Course />} />
 
         </Routes>
       </div>
