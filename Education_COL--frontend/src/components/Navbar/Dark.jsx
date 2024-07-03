@@ -8,7 +8,7 @@ const Dark = () => {
   return (
     <Button
       onClick={toggleDarkMode}
-      className={`me-3 border-0 ${isDarkMode ? "bg-secondary btn btn-secondary" : "bg-primary btn btn-primary"}`}
+      className={`me-3 border-0 ${isDarkMode ? "bg-dark btn btn-dark" : "bg-primary btn btn-primary"}`}
     >
       {isDarkMode ? (
         <i className="bi bi-moon-stars-fill fs-3"></i>

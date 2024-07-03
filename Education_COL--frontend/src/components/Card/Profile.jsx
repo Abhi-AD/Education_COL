@@ -95,7 +95,7 @@ function Profile() {
      ];
 
      return (
-          <div className={` slider-container p-2  ${isDarkMode ? 'bg-second' : 'bg-primary'}`}>
+          <div className={` slider-container p-2  ${isDarkMode ? 'bg-second' : 'bg-main'}`}>
                <Slider {...settings} className="d-flex">
                     {imageData.map((imageUrl, index) => (
                          <div key={index} className="text-center">

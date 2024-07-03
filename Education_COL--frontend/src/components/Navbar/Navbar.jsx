@@ -69,7 +69,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg ${isDarkMode ? "darkmode2" : "bg-main text-dark"
+      className={`navbar navbar-expand-lg  ${isDarkMode ? "darkmode2" : "bg-main text-dark"
         }`}
     >
       <div className="container-fluid">
@@ -112,27 +112,28 @@ const Navbar = () => {
               <Link
                 className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
                   }`}
+                aria-current="page"
+                to={`/unicamp`}
+              >
+                UniCamp
+              </Link>
+            </li>
+            <li className="nav-item me-4">
+              <Link
+                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
+                  }`}
                 to={`/course`}
               >
-                Course
+                Learn
               </Link>
             </li>
             <li className="nav-item me-4">
               <Link
                 className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
                   }`}
-                to={`/`}
+                to={`/euphoria`}
               >
-                Study Abroad
-              </Link>
-            </li>
-            <li className="nav-item me-4">
-              <Link
-                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
-                  }`}
-                to={`/`}
-              >
-                Contact Us
+                Euphoria
               </Link>
             </li>
             <li className="nav-item me-4">
@@ -142,6 +143,42 @@ const Navbar = () => {
                 to={`/sandboxing`}
               >
                 Sandboxing
+              </Link>
+            </li>
+            <li className="nav-item me-4">
+              <Link
+                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
+                  }`}
+                to={`/Founder's-club`}
+              >
+                Founder&apos;s club
+              </Link>
+            </li>
+            <li className="nav-item me-4">
+              <Link
+                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
+                  }`}
+                to={`/careers`}
+              >
+                Carees
+              </Link>
+            </li>
+            <li className="nav-item me-4">
+              <Link
+                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
+                  }`}
+                to={`/services`}
+              >
+                Services
+              </Link>
+            </li>
+            <li className="nav-item me-4">
+              <Link
+                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
+                  }`}
+                to={`/contact-us`}
+              >
+                Contact US
               </Link>
             </li>
           </ul>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { Footer, FooterCopyRight, Navbar, SelectStudent } from "../../components/import"
+import { SelectStudent } from "../../components/import"
 import { DreamJob, Join } from "../../container/import"
 import SandboxingHeader from "./SandboxingHeader"
 import SandboxingCount from "./SandboxingCount"
@@ -9,7 +9,6 @@ const Sandboxing = () => {
      const { isDarkMode } = useDarkMode();
      return (
           <div className={`${isDarkMode ? "darkmode" : ""}`}>
-               <Navbar />
                <SandboxingHeader />
                <SandboxingCount />
                <div className={`${isDarkMode ? 'darkmode2' : 'bg-light'}`}>
@@ -43,8 +42,6 @@ const Sandboxing = () => {
                     </div>
                </div>
                <Join />
-               <Footer />
-               <FooterCopyRight />
           </div>
      )
 }

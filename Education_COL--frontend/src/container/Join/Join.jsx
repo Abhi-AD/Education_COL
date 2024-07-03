@@ -6,7 +6,7 @@ const Join = () => {
      const strings = ["#instagram", "#youtube", "#twitter"];
      return (
           <div className={`${isDarkMode ? "bg-secondary" : "bg-main"}`}>
-               <div className="container text-center mt-5">
+               <div className="container text-center p-5">
                     <div className="title">
                          <p className="fs-4 text-uppercase fw-bold">Join us on</p>
                          <p>

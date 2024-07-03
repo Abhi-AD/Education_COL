@@ -7,3 +7,9 @@
      font-family: var(--font-family);
 
 }
+
+.contact-border {
+     height: 30px;
+     width: 30px;
+     background: #0d6efd;
+}

@@ -83,7 +83,7 @@ function SwipeToSlide() {
           '9', '18', '27', '36', '45', '54', '63', '72', '81', '90', '99', '108'
      ];
      return (
-          <div className={` slider-container p-2  ${isDarkMode ? 'bg-second' : 'bg-danger'}`}>
+          <div className={` slider-container p-2  ${isDarkMode ? 'bg-second' : 'bg-primary'}`}>
                <Slider {...settings} className="d-flex">
                     {cardData.map((item, index) => (
                          <div key={index} className="card text-center">
