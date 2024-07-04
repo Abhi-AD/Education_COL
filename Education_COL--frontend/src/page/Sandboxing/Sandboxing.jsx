@@ -21,7 +21,7 @@ const Sandboxing = () => {
                                         <p className="fs-6">Start your placement preparation today</p>
                                    </div>
                                    <div className="text-center pb-2 ">
-                                        <Link type="button" className="move text-light btn btn-primary fs-4 bg-second" to={`/what-we-do`}>
+                                        <Link type="button" className="move text-light btn btn-secondary fs-4 bg-second" to={`/what-we-do`}>
                                              Explore <i className="bi bi-chevron-double-right" data-aos="fade-left"></i>
                                         </Link>
                                    </div>

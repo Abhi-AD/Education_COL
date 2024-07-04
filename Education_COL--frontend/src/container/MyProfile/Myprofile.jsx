@@ -8,7 +8,7 @@ const MyProfile = () => {
           const file = event.target.files[0];
           if (file) {
                const reader = new FileReader();
-               reader.onloadend = ()http://localhost:5173/sandboxing => {
+               reader.onloadend = () => {
                     setProfileImage(reader.result);
                };
                reader.readAsDataURL(file);

@@ -15,7 +15,7 @@ const ScrollingNews = ({ isColorChanged }) => {
         Breaking News
       </div>
       <ul
-        className={` news_body d-flex list-unstyled m-0 text-nowrap px-3 py-3 position-relative} `}
+        className={` news_body text-dark d-flex list-unstyled m-0 text-nowrap px-3 py-3 position-relative} `}
       >
         <li className="news">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus

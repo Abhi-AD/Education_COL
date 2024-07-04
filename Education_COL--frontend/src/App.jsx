@@ -6,7 +6,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { Course, Home, Login, Register, Sandboxing } from './page/import ';
+import { Course, Home, Login, Register, Sandboxing, Services } from './page/import ';
 import ContactUs from './page/ContactUs/ContactUs';
 import { Footer, FooterCopyRight, Navbar } from './components/import';
 import { Myprofile } from './container/import';
@@ -24,6 +24,7 @@ function App() {
           <Route path="/course" element={<Course />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/myprofile" element={<Myprofile />} />
+          <Route path="/services" element={<Services />} />
         </Routes>
         <Footer />
         <FooterCopyRight />

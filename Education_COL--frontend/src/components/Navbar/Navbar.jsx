@@ -158,9 +158,9 @@ const Navbar = () => {
               <Link
                 className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
                   }`}
-                to={`/careers`}
+                to={`/career`}
               >
-                Carees
+                Career
               </Link>
             </li>
             <li className="nav-item me-4">
@@ -194,7 +194,7 @@ const Navbar = () => {
             )}
             {isInputVisible && (
               <form className="d-flex align-items-center gap-3" role="search">
-               second <input
+                <input
                   className="form-control me-2"
                   type="search"
                   placeholder="Search"
@@ -209,7 +209,7 @@ const Navbar = () => {
                   Submit
                 </button>
                 <div
-                  className="bg-main text-white rounded-circle fs-3 d-flex align-items-center justify-content-center p-2 me-3"
+                  className="bg-primary text-white rounded-circle fs-3 d-flex align-items-center justify-content-center p-2 me-3"
                   style={{ cursor: "pointer", height: "50px", width: "50px" }}
                   onClick={handleCloseClick}
                 >

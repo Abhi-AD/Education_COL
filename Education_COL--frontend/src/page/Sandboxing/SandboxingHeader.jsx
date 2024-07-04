@@ -15,7 +15,7 @@ const SandboxingHeader = () => {
                               </p>
                               <Typewriter />
                               <div className="">
-                                   <Link type="button" className={`text-light fw-bold border-0 btn btn-primary fs-4 bg-second p-3`} to={`/what-we-do`}>
+                                   <Link type="button" className={`text-light fw-bold border-0 btn btn-secondary fs-4 bg-second p-3`} to={`/what-we-do`}>
                                         Explore new batches <i className="bi bi-chevron-right" data-aos="fade-left"></i>
                                    </Link>
                               </div>
