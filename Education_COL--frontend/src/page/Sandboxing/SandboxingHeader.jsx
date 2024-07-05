@@ -5,7 +5,7 @@ import useDarkMode from "../../hooks/useDarkMode";
 const SandboxingHeader = () => {
      const { isDarkMode } = useDarkMode();
      return (
-          <div className={` ${isDarkMode ? "darkmode2" : "bg-primary"}`}>
+          <div className={` ${isDarkMode ? "darkmode2" : "bg-primary text-light"}`}>
                <div className="container">
                     <div className="row p-5">
                          <div className="col-md-5">

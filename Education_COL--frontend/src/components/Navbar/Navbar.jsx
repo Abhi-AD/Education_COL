@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import classNames from 'classnames';
 import Dark from "./Dark";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
@@ -68,10 +69,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className={`navbar navbar-expand-lg  ${isDarkMode ? "darkmode2" : "bg-main text-dark"
-        }`}
-    >
+    <nav className={`navbar navbar-expand-lg ${isDarkMode ? "darkmode2" : "bg-main text-dark"}`}>
       <div className="container-fluid">
         <Link className="navbar-brand me-auto" to={`/`}>
           {isLargeScreen ? (
@@ -79,7 +77,7 @@ const Navbar = () => {
               src={isDarkMode ? WhiteLogo : LgLogo}
               alt="Logo"
               width="150"
-              height="100"
+              height="80"
             />
           ) : (
             <img src={SmLogo} alt="Logo" width="100" height="50" />
@@ -97,95 +95,94 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li className="nav-item me-4">
-              <Link
-                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
-                  }`}
-                aria-current="page"
-                to={`/`}
-              >
-                Home
-              </Link>
-            </li>
-            <li className="nav-item me-4">
-              <Link
-                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
-                  }`}
-                aria-current="page"
-                to={`/unicamp`}
-              >
-                UniCamp
-              </Link>
-            </li>
-            <li className="nav-item me-4">
-              <Link
-                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
-                  }`}
-                to={`/course`}
-              >
-                Learn
-              </Link>
-            </li>
-            <li className="nav-item me-4">
-              <Link
-                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
-                  }`}
-                to={`/euphoria`}
-              >
-                Euphoria
-              </Link>
-            </li>
-            <li className="nav-item me-4">
-              <Link
-                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
-                  }`}
-                to={`/sandboxing`}
-              >
-                Sandboxing
-              </Link>
-            </li>
-            <li className="nav-item me-4">
-              <Link
-                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
-                  }`}
-                to={`/Founder's-club`}
-              >
-                Founder&apos;s club
-              </Link>
-            </li>
-            <li className="nav-item me-4">
-              <Link
-                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
-                  }`}
-                to={`/career`}
-              >
-                Career
-              </Link>
-            </li>
-            <li className="nav-item me-4">
-              <Link
-                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
-                  }`}
-                to={`/services`}
-              >
-                Services
-              </Link>
-            </li>
-            <li className="nav-item me-4">
-              <Link
-                className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"
-                  }`}
-                to={`/contact-us`}
-              >
-                Contact US
-              </Link>
-            </li>
-          </ul>
+          {!isInputVisible && (
+            <ul className={classNames("navbar-nav mx-auto mb-2 mb-lg-0", {
+              'fade-enter': !isInputVisible,
+              'fade-exit': isInputVisible
+            })}>
+              <li className="nav-item me-4">
+                <Link
+                  className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"}`}
+                  aria-current="page"
+                  to={`/`}
+                >
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item me-4">
+                <Link
+                  className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"}`}
+                  aria-current="page"
+                  to={`/unicamp`}
+                >
+                  UniCamp
+                </Link>
+              </li>
+              <li className="nav-item me-4">
+                <Link
+                  className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"}`}
+                  to={`/course`}
+                >
+                  Learn
+                </Link>
+              </li>
+              <li className="nav-item me-4">
+                <Link
+                  className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"}`}
+                  to={`/euphoria`}
+                >
+                  Euphoria
+                </Link>
+              </li>
+              <li className="nav-item me-4">
+                <Link
+                  className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"}`}
+                  to={`/sandboxing`}
+                >
+                  Sandboxing
+                </Link>
+              </li>
+              <li className="nav-item me-4">
+                <Link
+                  className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"}`}
+                  to={`/Founder's-club`}
+                >
+                  Founder&apos;s club
+                </Link>
+              </li>
+              <li className="nav-item me-4">
+                <Link
+                  className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"}`}
+                  to={`/career`}
+                >
+                  Career
+                </Link>
+              </li>
+              <li className="nav-item me-4">
+                <Link
+                  className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"}`}
+                  to={`/services`}
+                >
+                  Services
+                </Link>
+              </li>
+              <li className="nav-item me-4">
+                <Link
+                  className={`nav-link fs-5 ${isDarkMode ? "text-light" : "text-dark"}`}
+                  to={`/contact-us`}
+                >
+                  Contact US
+                </Link>
+              </li>
+            </ul>
+          )}
           <div className="d-flex align-items-center">
             {!isInputVisible && (
               <div
-                className="bg-secondary text-white rounded-circle fs-3 d-flex align-items-center justify-content-center p-2 me-3"
+                className={classNames("bg-secondary text-white rounded-circle fs-3 d-flex align-items-center justify-content-center me-3", {
+                  'fade-enter': !isInputVisible,
+                  'fade-exit': isInputVisible
+                })}
                 style={{ cursor: "pointer", height: "50px", width: "50px" }}
                 onClick={handleIconClick}
               >
@@ -193,19 +190,20 @@ const Navbar = () => {
               </div>
             )}
             {isInputVisible && (
-              <form className="d-flex align-items-center gap-3" role="search">
+              <form className={classNames("d-flex align-items-center", {
+                'fade-enter': isInputVisible,
+                'fade-exit': !isInputVisible
+              })} role="search" style={{ width: '99rem', height: '4rem' }}>
                 <input
-                  className="form-control me-2"
+                  className="form-control me-2 fs-5"
                   type="search"
                   placeholder="Search"
                   aria-label="Search"
                   value={searchTerm}
                   onChange={handleInputChange}
+                  style={{ height: '50px', borderRadius: '1rem' }}
                 />
-                <button
-                  className="btn text-dark btn-outline-secondary bg-secondary me-3"
-                  type="submit"
-                >
+                <button className={`me-3 ${isDarkMode ? "btn btn-primary" : "btn btn-secondary"}`} type="submit">
                   Submit
                 </button>
                 <div
